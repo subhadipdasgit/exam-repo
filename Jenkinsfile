@@ -9,7 +9,7 @@ stages {
         }
    stage('image build'){
         steps{
-                sh 'docker build -t apache2exam .'
+                sh 'docker build -t apache2.0exam .'
                 sh 'docker images'
              
              }
@@ -21,8 +21,8 @@ stages {
         }
    stage('image push'){
        steps{ 
-            sh 'docker tag apache2exam subhadipdocker/subhadip:apacheexam'
-            sh 'docker push subhadipdocker/subhadip:apacheexam'
+            sh 'docker tag apache2.0exam subhadipdocker/exam:apacheexam'
+            sh 'docker push subhadipdocker/exam:apacheexam'
             }
        }
    } 
