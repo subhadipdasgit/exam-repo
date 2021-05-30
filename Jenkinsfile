@@ -17,7 +17,7 @@ stages {
    stage('dockerhub login'){
         steps{
            withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'password', usernameVariable: 'usetrname')]) {
-                sh 'docker login -u $username -p $password'
+                sh 'docker login -u $usetrname -p $password'
              }
         }
    }
