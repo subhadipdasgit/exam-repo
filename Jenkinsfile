@@ -16,9 +16,12 @@ stages {
         }
    stage('dockerhub login'){
         steps{
-                sh 'docker login -u subhadipdocker -p 7699676975'
+           withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'password', usernameVariable: 'username')]) {
+    // some block
+                sh 'docker login -u username -p password'
              }
         }
+   }
    stage('image push'){
        steps{ 
             sh 'docker tag apache2.0exam subhadipdocker/exam:apacheexam2'
