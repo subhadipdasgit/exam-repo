@@ -24,8 +24,8 @@ stages {
    }
    stage('image push'){
        steps{ 
-            sh 'docker tag apache2.0exam subhadipdocker/exam:apacheexam2'
-            sh 'docker push subhadipdocker/exam:apacheexam2'
+            sh 'docker tag apache2.0exam subhadipdocker/exam:apacheexam3'
+            sh 'docker push subhadipdocker/exam:apacheexam3'
             }
        }
    } 
